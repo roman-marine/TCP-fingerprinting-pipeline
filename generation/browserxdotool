@@ -1,0 +1,96 @@
+#! /bin/bash
+# Requires xdotool
+python3 -m webbrowser -t "https://google.com"
+#sudo -u user env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY firefox &
+sleep 1
+for i in {1..15}; do
+    echo BROWSER
+done
+sleep 5
+te=$(ps aux | grep -i firefox | wc -l)
+if [[ "$te" == 1 ]]; then
+    read -p "Check if browser is open"
+    echo opened
+    sleep 5
+fi
+echo Opened
+
+sleep 15
+
+#bypass google cookies
+for i in {1..4}; do
+    xdotool key Tab
+    sleep 0.2
+done
+sleep 1
+xdotool key Return
+sleep 1
+xdotool key ctrl+t
+sleep 1
+# google search
+xdotool type "ICMP wiki"
+sleep 1
+xdotool key Return
+sleep 25
+xdotool key ctrl+l
+sleep 1
+xdotool type "https://wikipedia.org/wiki/Internet_Control_Message_Protocol"
+sleep 1
+xdotool key Return
+sleep 20
+xdotool key ctrl+w
+sleep 1
+
+
+#youtube.com
+xdotool key ctrl+t
+sleep 1
+xdotool type youtube.com
+sleep 1
+xdotool key Return
+sleep 25
+#bypass google cookies
+for i in {1..5}; do
+    xdotool key Tab
+    sleep 0.4
+done
+sleep 1
+xdotool key Return
+sleep 5
+
+#search
+for i in {1..4}; do
+    xdotool key Tab
+    sleep 0.4
+done
+sleep 1
+xdotool type "rick astley"
+sleep 1
+xdotool key Return
+sleep 15
+xdotool key ctrl+l
+sleep 1
+xdotool type https://www.youtube.com/watch?v=dQw4w9WgXcQ
+sleep 1
+xdotool key Return
+sleep 25
+xdotool key space
+sleep 2
+
+# ranking list
+xdotool key ctrl+t
+while IFS= read -r line; do
+    xdotool key ctrl+t
+    sleep 1
+    xdotool type $line
+    sleep 1
+    xdotool key Return
+    sleep 35
+    xdotool key ctrl+w
+done < /home/user/ranking.txt
+
+for i in {1..7}; do
+    xdotool key ctrl+w
+done
+sleep 5
+
