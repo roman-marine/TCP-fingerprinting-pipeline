@@ -1,0 +1,61 @@
+file_stem;os_family;os_label;kernel_version;mac_address
+almalinux;CentOS;AlmaLinux 10.1;Linux 6.12.0-124.8.1.el10_1x86_64;08:00:27:87:10:f7
+alpine;Alpine;Alpine Linux 3.23.2;Linux 6.18.4-0;08:00:27:9e:e6:0d
+archbang;Arch;ArchBANG;Linux 6.18.3-arch1-1;08:00:27:38:fd:a3
+archcraft;Arch;Archcraft v2025.10;Linux 6.17.2-arch1-1;08:00:27:c6:ad:ce
+artix-dinit;Arch;Artix Linux;Linux 6.16.6-artix1-1;08:00:27:2c:e2:46
+bazzite;Fedora;Bazzite 43;Linux 6.17.12-300.fc43;08:00:27:58:e2:60
+biglinux;Manjaro;BigLinux;Linux 6.12.63-1-MANJARO;08:00:27:61:f3:48
+bluestar;Arch;Bluestar Linux;Linux 6.18.5-arch1-1;08:00:27:ce:54:55
+bodhilinux;Ubuntu;Bodhi Linux 7.0.0;Linux 5.15.0-78-generic;08:00:27:d2:4a:7b
+cachy;Arch;Linux CachyOS;Linux 6.12.58-1-cachyos-lts;08:00:27:59:68:5e
+calculate;Gentoo;Calculate Linux Desktop Cinnamon;Linux 6.12.41-calculate;08:00:27:5d:7f:0d
+cent;CentOS;CentOS Stream 10;Linux 6.12.0-174.el10;08:00:27:0b:60:2d
+debian;Debian;Debian 13.3.0;Linux 6.12.63+deb13-amd64;08:00:27:65:56:ca
+deepin;Debian;Deepin Community 25.0.10;Linux 6.12.65-amd64-desktop-rolling;08:00:27:37:d7:ca
+devuan;Debian;Devuan 6;Linux 6.12.57+deb13-amd64;08:00:27:58:53:94
+dragonos;Ubuntu;DragonOS 24.04;Linux 6.14.0-37-generic;08:00:27:18:63:49
+elementaryos;Ubuntu;Elementary OS 8.1;Linux 6.17.0-14-generic;08:00:27:c5:45:69
+emmabuntus;Debian;Emmabuntus 6;Linux 6.12.57+deb13-amd64;08:00:27:78:49:9f
+endeavour;Arch;EndeavourOS;Linux 6.17.8-arch1-1;08:00:27:c8:ea:1b
+fedora;Fedora;Fedora Linux 43;Linux 6.18.5-200.fc43.x86_64;08:00:27:7c:35:94
+ferenos;Ubuntu;FerenOS 2025.03;Linux 6.8.0-85-generic;08:00:27:98:1b:3e
+freebsd;FreeBSD;FreeBSD 15.0;FreeBSD 15.0;08:00:27:e1:ee:b8
+funos;Ubuntu;FunOS 25.10;Linux 6.17.0-5-generic;08:00:27:4f:26:30
+garuda;Arch;Garuda;Linux 6.17.6-zen1-1-zen;08:00:27:b4:2e:c9
+ghostbsd;FreeBSD;GhostBSD 25.02-R41.3p2;FreeBSD 14.3-RELEASE-p2;08:00:27:0c:22:f8
+kali;Debian;Kali GNU/Linux;Linux 6.16.8+kali-amd64;08:00:27:8f:ab:29
+linux-lite;Ubuntu;Linux Lite 7.6;Linux 6.8.0.90-generic;08:00:27:2c:26:ed
+lubuntu;Ubuntu;Lubuntu 25.10;Linux 6.17.0-5-generic;08:00:27:d2:ea:3f
+maboxlinux;Manjaro;Mabox Linux 25.12;Linux 6.12.62-1-MANJARO;08:00:27:8d:14:05
+mageia;Mandriva;Mageia 9;Linux 6.4.9-desktop-4.mga9;08:00:27:8c:fd:c9
+manjaro;Arch;Manjaro Linux;Linux 6.18.8-1-MANJARO;08:00:27:46:61:6c
+mint;Ubuntu;Linux Mint 22.2;Linux 6.14.0.29-generic;08:00:27:e6:f4:4b
+mxlinux;Debian;MXLinux 25;Linux 6.12.48+deb13-amd64;08:00:27:a8:5e:71
+nobara;Fedora;Nobara Linux 43;Linux 6.18.3-201.nobara.fc43;08:00:27:f9:f1:3f
+openmandriva;Mandriva;OpenMandriva ROME 25.12;Linux 6.18.0-desktop-1omv2590;08:00:27:7d:59:99
+opensuse-leap;SUSE;OpenSUSE Leap 16.0;Linux 6.12-16.8-default;08:00:27:27:5b:df
+opensuse-tumbleweed;SUSE;OpenSUSE Tumbleweed;Linux 6.18.4-1-default;08:00:27:9b:1e:3a
+oracle;CentOS;Oracle Linux 10.1;Linux Oracle 6.12.0-106.55.4.2.el10uek.x86_64;08:00:27:b1:86:44
+parrot;Debian;Parrot Security 7;Linux 6.17.13+2-amd64;08:00:27:88:70:f1
+pclinuxos;Mandrake;PCLinuxOS 2025;Linux 6.12.48-pclos1;08:00:27:36:d6:12
+peppermint-debian;Debian;PeppermintOS (Debian);Linux 6.12.63+deb13-amd64;08:00:27:d1:ef:01
+peppermint-devuan;Devuan;PeppermintOS (Devuan);Linux 6.1.0-42-amd64;08:00:27:60:c4:54
+pop;Ubuntu;Pop!_OS 24.04 LTS;Linux 6.17.9-76061709-generic;08:00:27:cc:be:f8
+Q4OS;Debian;Debian GNU/Linux 13 (Q4OS);Linux 6.12.63+deb13-amd64;08:00:27:dd:95:74
+rhinolinux;Ubuntu;Rhino Linux 2025.4;Linux 6.18.1-061801-generic;08:00:27:e9:2b:eb
+rocky;Red Hat Enterprise;Rocky Linux 10.1;Linux 6.12.0-124.8.1.el10_1x86_64;08:00:27:a0:fd:32
+sdesk;Arch;SDesk;Linux 6.17.3-zen1-1-zen;08:00:27:f9:fa:39
+Solus;Solus;Solus 4.8;Linux 6.17.8-324.current;08:00:27:63:15:7c
+tails;Debian;Tails 7.4.1;Linux 6.12.63+deb13-amd64;08:00:27:28:40:76
+tuxedoos;Ubuntu;Tuxedo OS;Linux 6.14.0-119037-tuxedo;08:00:27:c7:01:71
+ubuntu;Ubuntu;Ubuntu 25.10 (GNOME);Linux 6.17.0.8-generic;08:00:27:dc:73:e9
+ultimatearchlite;Arch;Ultimate Arch Lite;Linux 6.17.8-zen1-1-zen;08:00:27:88:09:00
+vanilla;Debian;Vanilla OS 2 stable;Linux 6.17.9+deb14-amd64;08:00:27:65:f8:f7
+voyager-debian;Debian;Voyager 13.2 debian;Linux 6.12.57+deb13-amd64;08:00:27:0f:7f:91
+voyager-ubuntu;Ubuntu;Voyager 25.10;Linux 6.17.0.5-generic;08:00:27:69:1e:cf
+windows10;Windows;Windows 10 Home;Windows 10 22H2 Version 10.0.19045.6466;08:00:27:a6:87:df
+windows11;Windows;Windows 11 Home;Windows 11 24H2 Version 10.0.26100.7623;08:00:27:aa:c3:4e
+winux;Ubuntu;Winux;Linux 6.14.0-37-generic;08:00:27:c1:a4:8b
+xubuntu;Ubuntu;Ubuntu 25.10 (XFCE);Linux 6.17.0-5-generic;08:00:27:2f:fb:6a
+zorin;Ubuntu;Zorin OS 18 Core;Linux 6.14.0-37-generic;08:00:27:20:bc:9f
