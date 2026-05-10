@@ -1,0 +1,122 @@
+#! /bin/bash
+# Requires flatpak
+
+# Install
+/home/user/appinstall
+
+# ICMP
+sudo ping -c 30 google.com
+sudo ping -c 10 0
+sudo ping -c 30 10.0.3.102
+sudo ping -p 89225 -c 20 10.0.3.102
+sudo ping -p 524912 -c 30 wikipedia.org
+sudo ping -p 123456 -c 20 google.com
+
+sudo traceroute wikipedia.org
+sudo traceroute -I wikipedia.org
+sudo traceroute -T wikipedia.org
+
+
+# SMB
+smbclient -L //10.0.3.102 --user samba%samba
+sleep 1
+smbclient //10.0.3.102/share --user samba%samba --command "ls; get sshkey /home/user/sshkey; exit"
+sleep 1
+smbclient //10.0.3.102/share --user samba%samba --command "get ranking.txt /home/user/ranking.txt; exit"
+sleep 1
+smbclient //10.0.3.102/share --user samba%samba --command "get muttrc /home/user/muttrc; exit"
+sleep 1
+smbclient //10.0.3.102/share --user samba%samba --command "get key.py /home/user/key.py; exit"
+# folder
+cd /tmp
+mkdir /tmp/FFolder
+mkdir /tmp/Folder
+cd /tmp/FFolder
+sleep 1
+smbclient //10.0.3.102/share --user samba%samba --command "ls; recurse ON; prompt OFF; cd Folder; mget *; recurse OFF; exit"
+for i in $(seq 1 30);
+do
+    echo $i;
+    n=$(shuf --random-source=/dev/urandom -n 1 -i 19000-160000);
+    head -c $n /dev/urandom | base64 > random.txt;
+    smbclient //10.0.3.102/share --user samba%samba --command "cd Folder; put random.txt random$i.txt; exit";
+done
+
+# upload
+n=$(shuf --random-source=/dev/urandom -n 1 -i 19000-160000);
+head -c $n /dev/urandom | base64 > random.txt
+smbclient //10.0.3.102/share --user samba%samba --command "ls; put random.txt; exit"
+n=$(shuf --random-source=/dev/urandom -n 1 -i 19000-160000);
+head -c $n /dev/urandom | base64 > random.txt
+smbclient //10.0.3.102/share --user samba%samba --command "ls; put random.txt; exit"
+n=$(shuf --random-source=/dev/urandom -n 1 -i 19000-160000);
+head -c $n /dev/urandom | base64 > random.txt
+smbclient //10.0.3.102/share --user samba%samba --command "ls; put random.txt; exit"
+smbclient //10.0.3.102/share --user samba%samba --command "ls; prompt OFF; rm random.txt; exit"
+# mount
+sudo mkdir /mnt/smb_share
+echo -e "username=samba\npassword=samba" > /tmp/sambacred.txt
+sudo mount -t cifs -o credentials=/tmp/sambacred.txt //10.0.3.102/share /mnt/smb_share
+sleep 2
+cd /mnt/smb_share
+ls -la
+cd /mnt/smb_share/Folder
+ls -la
+sudo cp -a * /tmp/Folder
+sudo rm -f *
+sudo cp -a /tmp/Folder/* .
+cd /tmp/FFolder
+sudo umount -a -t cifs -l
+
+#WGET
+wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.3.0-amd64-netinst.iso
+wget https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/debian-13.3.0-arm64-netinst.iso
+
+# SSH
+cd /tmp
+sudo chmod 600 /home/user/sshkey
+ssh -o StrictHostKeyChecking=no -i /home/user/sshkey fedora@10.0.3.102 'mkdir sshFolder'
+scp  -i /home/user/sshkey -r Folder fedora@10.0.3.102:sshFolder
+ssh -i /home/user/sshkey fedora@10.0.3.102 'ls -la; cd Folder; ls -la; sleep 10; echo "done"'
+n=$(shuf --random-source=/dev/urandom -n 1 -i 19000-160000);
+head -c $n /dev/urandom | base64 > random.txt
+scp -i /home/user/sshkey random.txt fedora@10.0.3.102:random.txt
+n=$(shuf --random-source=/dev/urandom -n 1 -i 19000-160000);
+head -c $n /dev/urandom | base64 > random.txt
+scp -i /home/user/sshkey random.txt fedora@10.0.3.102:random.txt
+n=$(shuf --random-source=/dev/urandom -n 1 -i 19000-160000);
+head -c $n /dev/urandom | base64 > random.txt
+scp -i /home/user/sshkey random.txt fedora@10.0.3.102:random.txt
+ssh -i /home/user/sshkey fedora@10.0.3.102 'rm -rdf Folder; echo "done"'
+
+#Mail
+#send
+cd /tmp/FFolder
+mutt -F /home/user/muttrc -e "push ddd$\nq"
+n=$(shuf --random-source=/dev/urandom -n 1 -i 1000-10000);
+head -c $n /dev/urandom | base64 > attached.txt
+n=$(shuf --random-source=/dev/urandom -n 1 -i 1000-10000);
+head -c $n /dev/urandom | base64 > body.txt
+mutt -F /home/user/muttrc -s "Subject" -- xcv50a@gmail.com < body.txt
+mutt -F /home/user/muttrc -a attached.txt -s "README on body, attached file" -- xcv50a@gmail.com < body.txt
+n=$(shuf --random-source=/dev/urandom -n 1 -i 1000-10000);
+head -c $n /dev/urandom | base64 > attached.txt
+n=$(shuf --random-source=/dev/urandom -n 1 -i 1000-10000);
+head -c $n /dev/urandom | base64 > body.txt
+mutt -F /home/user/muttrc -a attached.txt -s "README on body, attached file" -- xcv50a@gmail.com < body.txt
+n=$(shuf --random-source=/dev/urandom -n 1 -i 1000-10000);
+head -c $n /dev/urandom | base64 > attached.txt
+n=$(shuf --random-source=/dev/urandom -n 1 -i 1000-10000);
+head -c $n /dev/urandom | base64 > body.txt
+mutt -F /home/user/muttrc -a attached.txt -s "README on body, attached file" -- xcv50a@gmail.com < body.txt
+
+#WEB
+#terminal
+curl -L google.com > /tmp/e
+curl -L facebook.com > /tmp/e
+curl -L twitter.com > /tmp/e
+
+
+#browser
+/home/user/browser
+sudo poweroff
