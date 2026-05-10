@@ -1,0 +1,12 @@
+#! /bin/bash
+sudo apt install -y traceroute
+sudo apt install -y xdotool
+sudo apt install -y wget
+sudo apt install -y curl
+sudo apt install -y openssh
+sudo apt install -y mutt
+sudo apt install -y cifs-utils
+sudo apt install -y smbclient
+flatpak install -y flathub org.mozilla.firefox
+flatpak install -y flathub org.torproject.torbrowser-launcher
+
